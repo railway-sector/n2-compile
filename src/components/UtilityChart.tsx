@@ -764,22 +764,24 @@ const UtilityChart = () => {
       <div
         id={chartID}
         style={{
-          width: "23vw",
-          height: "33vh",
+          // width: "23vw",
+          height: "31.5vh",
           backgroundColor: "rgb(0,0,0,0)",
           color: "white",
-          marginRight: "10px",
+          marginRight: "15px",
+          marginLeft: "15px",
         }}
       ></div>
       <div id="utilityLineChartTitle">LINE FEATURE</div>
       <div
         id={chartID_line}
         style={{
-          width: chard_width,
-          height: "33vh",
+          // width: chard_width,
+          height: "31.5vh",
           backgroundColor: "rgb(0,0,0,0)",
           color: "white",
-          marginRight: "10px",
+          marginRight: "15px",
+          marginLeft: "15px",
         }}
       ></div>
     </div>

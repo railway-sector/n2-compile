@@ -387,7 +387,7 @@ const TreeChart = () => {
         legendValueText: "{valuePercentTotal.formatNumber('#.')}% ({value})",
         radius: am5.percent(45), // outer radius
         innerRadius: am5.percent(28),
-        scale: 1.6,
+        scale: 1.8,
       })
     );
     pieSeriesRef_compen.current = pieSeries;
@@ -649,7 +649,7 @@ const TreeChart = () => {
       <div
         id={chartID_compen}
         style={{
-          width: chard_width,
+          // width: chard_width,
           height: "36vh",
           backgroundColor: "rgb(0,0,0,0)",
           color: "white",
