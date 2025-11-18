@@ -228,24 +228,93 @@ export const prowOthersLayer = new FeatureLayer({
   },
 });
 
-/* Alignment Others */
-var alignmentOthersRenderer = new SimpleRenderer({
+/* Permanent Fencing */
+var permanentFencingRenderer = new SimpleRenderer({
   symbol: new SimpleLineSymbol({
-    color: "#FFEBAF",
+    color: "#FFA77F",
     width: "2px",
   }),
 });
 
-export const alignmentOthersLayer = new FeatureLayer({
+export const permanentFencingLayer = new FeatureLayer({
   portalItem: {
     id: "08405962b360490ba4fe280a6761046c",
     portal: {
       url: "https://gis.railway-sector.com/portal",
     },
   },
-  layerId: 1,
-  title: "Temporary Fencing",
-  renderer: alignmentOthersRenderer,
+  layerId: 2,
+  title: "Permanent Fencing",
+  renderer: permanentFencingRenderer,
+  elevationInfo: {
+    mode: "on-the-ground",
+  },
+});
+
+/* Maintenance Road */
+var maintenanceRoadRenderer = new SimpleRenderer({
+  symbol: new SimpleLineSymbol({
+    color: "#98E600",
+    width: "2px",
+  }),
+});
+
+export const maintenanceRoadLayer = new FeatureLayer({
+  portalItem: {
+    id: "08405962b360490ba4fe280a6761046c",
+    portal: {
+      url: "https://gis.railway-sector.com/portal",
+    },
+  },
+  layerId: 2,
+  title: "Maintenance Road",
+  renderer: maintenanceRoadRenderer,
+  elevationInfo: {
+    mode: "on-the-ground",
+  },
+});
+
+/* Drainage */
+var drainageRenderer = new SimpleRenderer({
+  symbol: new SimpleLineSymbol({
+    color: "#0070FF",
+    width: "2px",
+  }),
+});
+
+export const drainageLayer = new FeatureLayer({
+  portalItem: {
+    id: "08405962b360490ba4fe280a6761046c",
+    portal: {
+      url: "https://gis.railway-sector.com/portal",
+    },
+  },
+  layerId: 2,
+  title: "Drainage",
+  renderer: drainageRenderer,
+  elevationInfo: {
+    mode: "on-the-ground",
+  },
+});
+
+/* Future Track */
+var futureTrackRenderer = new SimpleRenderer({
+  symbol: new SimpleLineSymbol({
+    color: "#C500FF",
+    width: "2px",
+  }),
+});
+
+export const futureTrackLayer = new FeatureLayer({
+  portalItem: {
+    id: "08405962b360490ba4fe280a6761046c",
+    portal: {
+      url: "https://gis.railway-sector.com/portal",
+    },
+  },
+  layerId: 2,
+  title: "Provision for Freight Line",
+  renderer: futureTrackRenderer,
   elevationInfo: {
     mode: "on-the-ground",
   },
@@ -2835,7 +2904,10 @@ export const alignmentGroupLayer = new GroupLayer({
     pierHeadColumnLayer,
     chainageLayer,
     prowOthersLayer,
-    alignmentOthersLayer,
+    permanentFencingLayer,
+    maintenanceRoadLayer,
+    drainageLayer,
+    futureTrackLayer,
   ],
 });
 
