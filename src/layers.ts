@@ -228,6 +228,29 @@ export const prowOthersLayer = new FeatureLayer({
   },
 });
 
+/* Alignment Others */
+var alignmentOthersRenderer = new SimpleRenderer({
+  symbol: new SimpleLineSymbol({
+    color: "#FFEBAF",
+    width: "2px",
+  }),
+});
+
+export const alignmentOthersLayer = new FeatureLayer({
+  portalItem: {
+    id: "08405962b360490ba4fe280a6761046c",
+    portal: {
+      url: "https://gis.railway-sector.com/portal",
+    },
+  },
+  layerId: 1,
+  title: "Temporary Fencing",
+  renderer: alignmentOthersRenderer,
+  elevationInfo: {
+    mode: "on-the-ground",
+  },
+});
+
 /* PNR */
 let pnrRenderer = new UniqueValueRenderer({
   field: "OwnershipType",
@@ -2812,6 +2835,7 @@ export const alignmentGroupLayer = new GroupLayer({
     pierHeadColumnLayer,
     chainageLayer,
     prowOthersLayer,
+    alignmentOthersLayer,
   ],
 });
 
