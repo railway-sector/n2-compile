@@ -266,7 +266,7 @@ export const maintenanceRoadLayer = new FeatureLayer({
       url: "https://gis.railway-sector.com/portal",
     },
   },
-  layerId: 2,
+  layerId: 3,
   title: "Maintenance Road",
   renderer: maintenanceRoadRenderer,
   elevationInfo: {
@@ -289,7 +289,7 @@ export const drainageLayer = new FeatureLayer({
       url: "https://gis.railway-sector.com/portal",
     },
   },
-  layerId: 2,
+  layerId: 4,
   title: "Drainage",
   renderer: drainageRenderer,
   elevationInfo: {
@@ -312,7 +312,7 @@ export const futureTrackLayer = new FeatureLayer({
       url: "https://gis.railway-sector.com/portal",
     },
   },
-  layerId: 2,
+  layerId: 5,
   title: "Provision for Freight Line",
   renderer: futureTrackRenderer,
   elevationInfo: {
