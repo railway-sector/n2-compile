@@ -1715,6 +1715,10 @@ export function defineActions(event: any) {
   }
 
   item.title === "Chainage" ||
+  item.title === "Permanent Fencing" ||
+  item.title === "Maintenance Road" ||
+  item.title === "Drainage" ||
+  item.title === "Provision for Freight Line" ||
   item.title === "Households" ||
   item.title === "Households Ownership (Structure)" ||
   item.title === "Occupancy (Structure)" ||
