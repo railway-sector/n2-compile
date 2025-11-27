@@ -1715,6 +1715,7 @@ export function defineActions(event: any) {
   }
 
   item.title === "Chainage" ||
+  item.title === "Temporary Fencing" ||
   item.title === "Permanent Fencing" ||
   item.title === "Maintenance Road" ||
   item.title === "Drainage" ||

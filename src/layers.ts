@@ -228,6 +228,29 @@ export const prowOthersLayer = new FeatureLayer({
   },
 });
 
+/* Temporary Fencing */
+var temporaryFencingRenderer = new SimpleRenderer({
+  symbol: new SimpleLineSymbol({
+    color: "#FFEBBE",
+    width: "2px",
+  }),
+});
+
+export const temporaryFencingLayer = new FeatureLayer({
+  portalItem: {
+    id: "08405962b360490ba4fe280a6761046c",
+    portal: {
+      url: "https://gis.railway-sector.com/portal",
+    },
+  },
+  layerId: 1,
+  title: "Temporary Fencing",
+  renderer: temporaryFencingRenderer,
+  elevationInfo: {
+    mode: "on-the-ground",
+  },
+});
+
 /* Permanent Fencing */
 var permanentFencingRenderer = new SimpleRenderer({
   symbol: new SimpleLineSymbol({
@@ -2904,6 +2927,7 @@ export const alignmentGroupLayer = new GroupLayer({
     pierHeadColumnLayer,
     chainageLayer,
     prowOthersLayer,
+    temporaryFencingLayer,
     permanentFencingLayer,
     maintenanceRoadLayer,
     drainageLayer,
