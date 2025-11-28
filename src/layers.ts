@@ -605,7 +605,9 @@ let customContentLot = new CustomContent({
     //var date = dateFormat(daten, 'MM-dd-yyyy');
     //<li>Hand-Over Date: <b>${date}</b></li><br>
 
-    return `<ul><li>Handed-Over Area: <b>${handOverArea} %</b></li>
+    return `
+    <div style="color: #eaeaea">
+    <ul><li>Handed-Over Area: <b>${handOverArea} %</b></li>
     <li>Hand-Over Date: <b>${date}</b></li>
               <li>Status:           <b>${
                 statusLot >= 0 ? lotStatusArray[statusLot - 1] : ""
@@ -617,12 +619,14 @@ let customContentLot = new CustomContent({
               <li>Barangay:         <b>${barangay}</b></li>
               <li>Land Owner:       <b>${landOwner}</b>
               <li>CP:               <b>${cpNo}</b>
-              <li>Endorsed:         <b>${endorsed}</b></li></ul>`;
+              <li>Endorsed:         <b>${endorsed}</b></li></ul>
+              </div>
+              `;
   },
 });
 
 const templateLot = new PopupTemplate({
-  title: "Lot No.: <b>{LotID}</b>",
+  title: "<div style='color: #eaeaea'>Lot No.: <b>{LotID}</b></div>",
   lastEditInfoEnabled: false,
   content: [customContentLot],
 });
@@ -837,7 +841,7 @@ export const structureLayer = new FeatureLayer({
     mode: "on-the-ground",
   },
   popupTemplate: {
-    title: "<p>{StrucID}</p>",
+    title: "<div style='color: #eaeaea'>{StrucID}</div>",
     lastEditInfoEnabled: false,
     returnGeometry: true,
     content: [
@@ -1072,7 +1076,7 @@ export const nloLayer = new FeatureLayer({
   minScale: 10000,
   maxScale: 0,
   popupTemplate: {
-    title: "<p>{StrucID}</p>",
+    title: "<div style='color: #eaeaea'>{StrucID}</div>",
     lastEditInfoEnabled: false,
     returnGeometry: true,
     content: [
@@ -1239,7 +1243,7 @@ export const occupancyLayer = new FeatureLayer({
     mode: "relative-to-scene",
   },
   popupTemplate: {
-    title: "<p>{StrucID}</p>",
+    title: "<div style='color: #eaeaea'>{StrucID}</div>",
     lastEditInfoEnabled: false,
     returnGeometry: true,
     content: [
@@ -1665,7 +1669,7 @@ let customContent = new CustomContent({
 });
 
 const template = new PopupTemplate({
-  title: "Pier No: <b>{PierNumber}</b>",
+  title: "<div style='color: #eaeaea'>Pier No: <b>{PierNumber}</b></div>",
   lastEditInfoEnabled: false,
   content: [customContent],
 });
@@ -1844,7 +1848,7 @@ export const treeCompensationLayer = new FeatureLayer({
   title: "Tree Compensation",
   renderer: treeCompensationRenderer,
   popupTemplate: {
-    title: "<h5>{Compensation}</h5>",
+    title: "<div style='color: #eaeaea'>{Compensation}</div>",
     lastEditInfoEnabled: false,
     // returnGeometry: true,
     content: [
@@ -2069,7 +2073,7 @@ export const utilityPointLayer = new FeatureLayer({
     //offset: 0
   },
   popupTemplate: {
-    title: "<h5>{comp_agency}</h5>",
+    title: "<div style='color: #eaeaea'>{comp_agency}</div>",
     lastEditInfoEnabled: false,
     returnGeometry: true,
     content: [
@@ -2230,7 +2234,7 @@ export const utilityPointLayer1 = new FeatureLayer({
   },
   labelingInfo: [utilPointStatusLabel],
   popupTemplate: {
-    title: "<h5>{comp_agency}</h5>",
+    title: "<div style='color: #eaeaea'>{comp_agency}</div>",
     lastEditInfoEnabled: false,
     returnGeometry: true,
     content: [
@@ -2366,7 +2370,7 @@ export const utilityLineLayer = new FeatureLayer({
   },
 
   popupTemplate: {
-    title: "<h5>{comp_agency}</h5>",
+    title: "<div style='color: #eaeaea'>{comp_agency}</div>",
     lastEditInfoEnabled: false,
     returnGeometry: true,
     content: [
@@ -2587,7 +2591,7 @@ export const utilityLineLayer1 = new FeatureLayer({
   renderer: utilLineStatusRenderer,
   labelingInfo: [utilityLineLabelClass],
   popupTemplate: {
-    title: "<h5>{comp_agency}</h5>",
+    title: "<div style='color: #eaeaea'>{comp_agency}</div>",
     lastEditInfoEnabled: false,
     returnGeometry: true,
     content: [
@@ -2773,7 +2777,7 @@ export let stFoundationLayer: null | any;
 export let exteriorShellLayer: null | any;
 
 export const popuTemplate = {
-  title: "{Station}",
+  title: "<div style='color: #eaeaea'>{Station}</div>",
   content: [
     {
       type: "fields",
